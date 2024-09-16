@@ -1,0 +1,44 @@
+:root {
+    --button-text: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    transition: 2s;
+}
+
+body.dark-mode {
+    background-color: black;
+}
+
+button {
+    transition: 2s;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 40px;
+    border-radius: 15px;
+    background-color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    animation: darkBoxShadow 5s infinite;
+}
+
+.btn-dark-mode {
+    transition: 2s;
+    color: var(--button-text);
+    background-color: black;
+    border: 3px solid white;
+    animation: lightBoxShadow 5s infinite;
+}
+
+@keyframes lightBoxShadow  {
+    50% {box-shadow: rgba(248, 241, 174, 1) 0px 5px 15px;}
+}
+
+@keyframes darkBoxShadow {
+    50% {box-shadow: rgba(36, 36, 36, 1) 0px 5px 15px;;}
+}
